@@ -3,8 +3,11 @@ Create a function to check if a number is prime or not */
 
 function primeNumber (p){
     res = true
-    for (let i=2; i<p; i++ ){
-        if (p % i == 0){
+    if (p <=0 ){
+        return false
+    }
+    for (let i=2; i<= Math.sqrt(p); i++ ){
+        if (p % i === 0){
             res = false
             return (`${p} is not a prime number`)
         }
